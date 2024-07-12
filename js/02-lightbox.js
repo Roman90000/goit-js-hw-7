@@ -14,16 +14,8 @@ const markup = galleryItems
 
 ulEl.insertAdjacentHTML("beforeend", markup);
 
-ulEl.addEventListener("click", onModal);
-
-function onModal(evt) {
-  evt.preventDefault();
-
-  var lightbox = new SimpleLightbox(".gallery a", {
-    caption: true,
-    captionsData: "alt",
-    captionDelay: 250,
-  });
-}
-
-console.log(SimpleLightbox);
+var lightbox = new SimpleLightbox(".gallery a", {
+  caption: true,
+  captionsData: "alt",
+  captionDelay: 250,
+});
